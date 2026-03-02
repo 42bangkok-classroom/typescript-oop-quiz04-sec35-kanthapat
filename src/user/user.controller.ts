@@ -5,7 +5,7 @@ import { UserService } from './user.service';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @Get()
+  @Get('test')
   test(): any[] {
     return this.userService.test();
   }
