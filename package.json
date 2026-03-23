@@ -10,9 +10,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix"
+    "start:debug": "nest start --debug --watch"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
