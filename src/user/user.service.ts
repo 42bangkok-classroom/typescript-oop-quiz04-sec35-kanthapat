@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import * as fs from 'fs';
 import * as path from 'path';
 
-import { IUser } from './interface';
+import { IUser } from './user.interface';
 import { CreateUserDto } from './dto/create-user.dto';
 
 @Injectable()
