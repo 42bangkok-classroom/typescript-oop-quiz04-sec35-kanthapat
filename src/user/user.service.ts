@@ -21,9 +21,9 @@ export class UserService {
 
   findOne(id: string, fields?: string[]): Partial<IUser> {
     const users = this.findAll();
-    let user:IUser | null = null;
-    for(let i = 0; i < users.length; i++) {
-      if(users[i].id === id) {
+    let user: IUser | null = null;
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].id === id) {
         user = users[i];
         break;
       }
@@ -33,16 +33,16 @@ export class UserService {
       throw new NotFoundException('User not found');
     }
 
-    if(fields === undefined) {
+    if (fields === undefined) {
       return user;
     }
 
     const filterUser: Partial<IUser> = {};
 
-    for(let i = 0; i < fields.length; i++) {
+    for (let i = 0; i < fields.length; i++) {
       const field = fields[i];
 
-      if(user[field as keyof IUser] !== undefined) {
+      if (user[field as keyof IUser] !== undefined) {
         filterUser[field as keyof IUser] = user[field as keyof IUser];
       }
     }
